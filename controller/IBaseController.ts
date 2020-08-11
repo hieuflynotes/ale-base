@@ -1,4 +1,4 @@
-import { JoinCondition } from "base-ale/model/Filter";
+import { JoinCondition } from "../model/Filter";
 import { Paging } from "./Paging";
 
 export interface IBaseController<T> {
