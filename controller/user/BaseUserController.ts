@@ -1,4 +1,4 @@
-import { BaseUser, BaseUserWithJwt } from "base-ale/model/user/BaseUser";
+import { BaseUser, BaseUserWithJwt } from "@Core/model/user/BaseUser";
 import { BaseController } from "../BaseController";
 import { IBaseUserController } from "./IBaseUserController";
 
