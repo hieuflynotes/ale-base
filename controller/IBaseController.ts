@@ -10,6 +10,7 @@ export interface IBaseController<T> {
     orderByField?: string[]
   ): Promise<Paging<T[]>>;
   get(id: string): Promise<T>;
-  update(t: T): Promise<T>;
+  create(t: T): Promise<T>;
+  update(id: string, t: T): Promise<T>;
   delete(id: string): Promise<T>;
 }
