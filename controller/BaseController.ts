@@ -18,7 +18,7 @@ export class BaseController<T> implements IBaseController<T> {
     page?: number,
     pageSize?: number,
     orderByField?: string[]
-  ): Promise<Paging<T[]>> {
+  ): Promise<Paging<T>> {
     const url = `${this.serviceURL}/${this.basePath}`;
     throw new Error("Method not implemented.");
   }
