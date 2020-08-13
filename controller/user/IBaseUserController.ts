@@ -1,5 +1,5 @@
-import { BaseUser, BaseUserWithJwt } from "base-ale/model/user/BaseUser";
 import { IBaseController } from "../IBaseController";
+import { BaseUser, BaseUserWithJwt } from "@Core/model/user/BaseUser";
 
 export interface IBaseUserController extends IBaseController<BaseUser> {
   getMe(): Promise<BaseUser>;

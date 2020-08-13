@@ -18,7 +18,7 @@ export class BaseController<T> implements IBaseController<T> {
     page?: number,
     pageSize?: number,
     orderByField?: string[]
-  ): Promise<Paging<T[]>> {
+  ): Promise<Paging<T>> {
     const url = `${this.serviceURL}/${this.basePath}`;
     throw new Error("Method not implemented.");
   }
@@ -26,10 +26,15 @@ export class BaseController<T> implements IBaseController<T> {
     const url = `${this.serviceURL}/${this.basePath}/${id}`;
     throw new Error("Method not implemented.");
   }
-  public update(t: T): Promise<T> {
+  create(t: T): Promise<T> {
+    throw new Error("Method not implemented.");
+  }
+
+  public update(id: string, t: T): Promise<T> {
     const url = `${this.serviceURL}/${this.basePath}`;
     throw new Error("Method not implemented.");
   }
+  
   public delete(id: string): Promise<T> {
     const url = `${this.serviceURL}/${this.basePath}/${id}`;
     throw new Error("Method not implemented.");

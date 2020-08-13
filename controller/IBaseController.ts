@@ -8,7 +8,7 @@ export interface IBaseController<T> {
     page?: number,
     pageSize?: number,
     orderByField?: string[]
-  ): Promise<Paging<T[]>>;
+  ): Promise<Paging<T>>;
   get(id: string): Promise<T>;
   create(t: T): Promise<T>;
   update(id: string, t: T): Promise<T>;
