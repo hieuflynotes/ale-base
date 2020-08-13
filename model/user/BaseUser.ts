@@ -4,6 +4,7 @@ export class BaseUser extends BaseModel {
   loginType?: LoginType;
   avatar?: string;
   fullName?: string;
+  referalFromId?: string;
   firstName?: string;
   lastname?: string;
   phonenumber?: string;
