@@ -1,10 +1,10 @@
-import { JoinCondition } from "../model/Filter";
+import { Filter } from "../model/Filter";
 import { Paging } from "./Paging";
 
 export interface IBaseController<T> {
   find(): Promise<T[]>;
   list(
-    joinConditions?: JoinCondition[],
+    filters?: Filter[],
     page?: number,
     pageSize?: number,
     orderByField?: string[]
