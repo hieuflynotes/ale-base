@@ -1,25 +1,8 @@
 import { BaseModel } from "../BaseModel";
+import { Account } from "../account/Account";
 
-export class BaseUser extends BaseModel {
-  loginType?: LoginType;
-  avatar?: string;
-  fullName?: string;
-  referalFromId?: string;
-  firstName?: string;
-  lastname?: string;
-  phonenumber?: string;
-  email?: string;
-  lastLogin?: Date;
-  username?: string;
-  password?: string;
-}
+export class BaseUser extends Account {}
 
 export class BaseUserWithJwt extends BaseUser {
   jwt?: string;
-}
-
-export enum LoginType {
-  phonenumber = "phonenumber",
-  facebook = "facebook",
-  google = "google",
 }
