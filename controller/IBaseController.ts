@@ -9,7 +9,7 @@ export interface IBaseController<T> {
     pageSize?: number,
     orderByField?: string[]
   ): Promise<Paging<T>>;
-  get(id: string): Promise<T>;
+  get(id: string | string[]): Promise<T>;
   create(t: T): Promise<T>;
   update(id: string, t: T): Promise<T>;
   delete(id: string): Promise<T>;
