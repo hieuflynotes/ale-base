@@ -12,7 +12,8 @@ export class Account extends BaseOrganizationModel {
   public mobile?: string;
   public roleIds?: string[];
   public lastLogin?: Date;
-  public referalFromUser?: string | BaseUser;
+  public referalFromUserId?: string;
+  public referalFromUser?: BaseUser;
   public loginType?: LoginType;
   public gender?: Gender;
 }
