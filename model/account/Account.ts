@@ -1,5 +1,6 @@
 import { BaseOrganizationModel } from "../BaseOrganizationModel";
 import { BaseUser } from "../user/BaseUser";
+import { Role } from "./Role";
 
 export class Account extends BaseOrganizationModel {
   public username?: string;
@@ -11,6 +12,7 @@ export class Account extends BaseOrganizationModel {
   public email?: string;
   public mobile?: string;
   public roleIds?: string[];
+  public roles?: Role[];
   public lastLogin?: Date;
   public referalFromUserId?: string;
   public referalFromUser?: BaseUser;
