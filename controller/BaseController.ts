@@ -1,4 +1,4 @@
-import { JoinCondition, Filter } from "@Core/model/Filter";
+import { Filter } from "@Core/model/Filter";
 import { IBaseController } from "./IBaseController";
 import { Paging } from "./Paging";
 export class BaseController<T> implements IBaseController<T> {
@@ -22,6 +22,16 @@ export class BaseController<T> implements IBaseController<T> {
     const url = `${this.serviceURL}/${this.basePath}`;
     throw new Error("Method not implemented.");
   }
+
+  listWithQuery(
+    query?: T,
+    page?: number,
+    pageSize?: number,
+    orderByField?: string[]
+  ): Promise<Paging<T>> {
+    throw new Error("Method not implemented.");
+  }
+
   public get(id: string): Promise<T> {
     const url = `${this.serviceURL}/${this.basePath}/${id}`;
     throw new Error("Method not implemented.");

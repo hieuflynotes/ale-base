@@ -9,6 +9,12 @@ export interface IBaseController<T> {
     pageSize?: number,
     orderByField?: string[]
   ): Promise<Paging<T>>;
+  listWithQuery(
+    query?: T,
+    page?: number,
+    pageSize?: number,
+    orderByField?: string[]
+  ): Promise<Paging<T>>;
   get(id: string | string[]): Promise<T>;
   create(t: T): Promise<T>;
   update(id: string, t: T): Promise<T>;
