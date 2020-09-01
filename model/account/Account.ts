@@ -18,6 +18,7 @@ export class Account extends BaseOrganizationModel {
   public referalFromUser?: BaseUser;
   public loginType?: LoginType;
   public gender?: Gender;
+  jwt?: string;
 }
 
 export enum LoginType {
