@@ -30,5 +30,5 @@ export enum LoginType {
 
 export enum Gender {
   male = "male",
-  famale = "female",
+  female = "female",
 }
